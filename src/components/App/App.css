@@ -1,3 +1,25 @@
+.caption{
+  text-align: center;
+  font-size: 10pt;
+}
+
+
+.home-div{
+  background-color: beige;
+  padding: 2vw;
+  margin: 2vw;
+}
+
+#home-pancake{
+  width: 50vw;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+
 .nav{
   padding: 0;
   margin: 0;
@@ -7,18 +29,43 @@
   color: inherit;
   list-style: none;
    background-color: black;
+   justify-content: center;
+}
+
+.nav-item{
+  text-decoration: none;
+  color: white;
+  margin:3vw;
+
+
+  background-color:black;
 }
 
 .subhead{text-align: center;}
 
-.pals-layout{
-font-size: 24pt;
+.pal-about{font-size:16pt;
+  margin-top:0;
+}
+
+.pal-name{
 text-align: center;
+font-size: 24pt;
+margin-bottom: 0;
+}
+
+.pals-layout{
 margin-top: 5vh;
-margin-bottom:10vh}
+margin-bottom:5vh;
+margin-left:auto;
+margin-right:auto;
+width:65vw;
+}
 
 .pal-picture{
   width: 55vw;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .recipe-div{
@@ -28,13 +75,6 @@ margin-bottom:10vh}
   margin-left: auto;
   margin-right:auto;
   padding-bottom: 2vh;
-}
-
-.nav-item{
-  text-decoration: none;
-  color: white;
-  margin-left: 10vw;
-  background-color:black;
 }
 
 .page-title{text-align: center;

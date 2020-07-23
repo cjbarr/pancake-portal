@@ -49,7 +49,7 @@ class Recipes extends Component {
                }
         </ul>
             <h4>Preparation</h4>
-            <p>Mix your dry, then add in your wet and combine until mostly uniform. Should be runny and easy to ladel onto a hot pan!</p>
+            <p>Mix your dry, then add in your wet and combine until mostly uniform. Should be runny and easy to ladel onto a hot pan! Add in whatever other ingredients you feel like, it's an amazing base!</p>
         </div>
 
         </>
