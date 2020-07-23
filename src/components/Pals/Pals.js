@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Corey from '../../Images/corey.jpg'
 
 
 
