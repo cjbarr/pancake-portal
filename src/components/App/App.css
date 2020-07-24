@@ -15,6 +15,10 @@
   display:block;
   margin-left:auto;
   margin-right:auto;
+  border: khaki solid 2px;
+  padding:1.5vw;
+  background-color:khaki;
+  border-radius:100px;
 }
 
 
@@ -30,16 +34,41 @@
   list-style: none;
    background-color: black;
    justify-content: center;
+   height:5vh;
+   align-items: center;
 }
 
 .nav-item{
   text-decoration: none;
   color: white;
   margin:3vw;
-
-
   background-color:black;
 }
+
+.pancake-picture{
+  height:50vh;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.post-div{
+  background-color: khaki;
+  margin:1vh;
+  list-style: none;
+  min-height:8vh;
+}
+
+#post-btn{
+  display: block;
+  margin-right:1vw;
+  margin-left:auto;
+
+}
+
+.post-input{display:block;
+margin-left:auto;
+margin-right:auto;}
 
 .subhead{text-align: center;}
 
@@ -49,8 +78,9 @@
 
 .pal-name{
 text-align: center;
-font-size: 24pt;
+font-size: 26pt;
 margin-bottom: 0;
+margin-top:1vh
 }
 
 .pals-layout{
@@ -59,6 +89,12 @@ margin-bottom:5vh;
 margin-left:auto;
 margin-right:auto;
 width:65vw;
+background-color:khaki;
+padding-left: 2vw;
+padding-right:2vw;
+padding-top:1vh;
+padding-bottom:1vh;
+border-radius:40px;
 }
 
 .pal-picture{
@@ -71,13 +107,15 @@ width:65vw;
 .recipe-div{
   width:50vw;
   justify-content: center;
-  background-color: gainsboro;
+  background-color: khaki;
   margin-left: auto;
   margin-right:auto;
   margin-bottom:5vh;
   padding-bottom: 2vh;
+  padding-top: 0.25vh;
   padding-left:1vw;
   padding-right:1vw;
+  border-radius:15px;
   
 }
 
@@ -89,7 +127,9 @@ margin-left:5vw;
 margin-right:5vw;
 font-family: tahoma;}
 
-header{background-color: blanchedalmond;
+header{background-color:goldenrod;
 margin-top: 0px;
 padding-left: 1vw;
-padding-right:1vw;}
+padding-right:1vw;
+padding-top:.25vh;
+padding-bottom:.25vh;}

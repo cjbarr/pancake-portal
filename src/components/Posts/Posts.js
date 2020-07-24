@@ -3,41 +3,37 @@ import React, { Component } from 'react';
 
 
 class Posts extends Component {
-    state= [
-    ]
+    state= {posts:['Posts are currently under construction!', "I'm an example post!"]}
+    
 
     
 
     handleChange = (event, typeOf) => {
-        console.log(event.target.value, typeOf);
         this.setState({
-            ...this.state,
             [typeOf]: event.target.value
             
         })
     }
     
     postSubmit =(event)=>{
-    console.log(this.state)
         this.setState({
-            ...this.state,
-            published: this.state.post,
-            post:''
+            posts:[...this.state.posts, this.state.text],
+            text:''
         })
     }
 
      render(){
     return (
-        <>
+        <div className="home-div">
             <h2 class="page-title">Pancake Posts Page</h2>
-            <label htmlFor="postInput">Write your post here: </label>
-            <input id="postInput" value={this.state.post} onChange={(event) => this.handleChange(event, 'post')} />
-        <button onClick={this.postSubmit}>Post</button>
+            <textarea placeholder="Write your post here:" rows="4" cols="50" className="post-input" value={this.state.text} onChange={(event) => this.handleChange(event, 'text')} />
+       <br></br>
+        <button id="post-btn" onClick={this.postSubmit}>Post</button>
 
-        {/* {this.state!==[] &&
-            <div>{this.state}</div>
-     } */}
-        </>
+        {this.state.posts!==[] &&
+            <ul>{this.state.posts.map(post=><li className="post-div">{post}</li>)}</ul>
+     }
+        </div>
     )
 }
 }
