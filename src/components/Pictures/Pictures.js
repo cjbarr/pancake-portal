@@ -4,7 +4,12 @@ function Pictures() {
     return (
         <div className="home-div">
         <h2 class="page-title">Pancake Pictures</h2>
-        <img className="pancake-picture" src="https://www.recipetineats.com/wp-content/uploads/2017/06/Pancakes-SQ.jpg" alt="Stack of pancakes"/>
+        <div id="pancake-picture-div">
+                <img className="pancake-picture" src="/images/pancake1.jpg" alt="Stack of pancakes"/>
+                <img className="pancake-picture" src="/images/pancake2.jpg" alt="Stack of pancakes" />
+                <img className="pancake-picture" src="/images/pancake3.jpg" alt="Stack of pancakes" />
+                <img className="pancake-picture" src="/images/pancake4.jpg" />
+        </div>
         </div>
     )
 }

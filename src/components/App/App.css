@@ -1,8 +1,19 @@
+body{background-color: burlywood;
+margin-left:5vw;
+margin-right:5vw;
+font-family: tahoma;}
+
 .caption{
   text-align: center;
   font-size: 10pt;
 }
 
+header{background-color:goldenrod;
+margin-top: 0px;
+padding-left: 1vw;
+padding-right:1vw;
+padding-top:.25vh;
+padding-bottom:.25vh;}
 
 .home-div{
   background-color: beige;
@@ -21,8 +32,10 @@
   border-radius:100px;
 }
 
-
-
+#key-points{background: khaki;
+border-radius: 25px;
+padding:.5vw;
+}
 
 .nav{
   padding: 0;
@@ -36,51 +49,25 @@
    justify-content: center;
    height:5vh;
    align-items: center;
+   text-align: center;
 }
 
 .nav-item{
   text-decoration: none;
   color: white;
-  margin:3vw;
+  margin-left:3vw;
+  margin-right:3vw;
   background-color:black;
-}
-
-.pancake-picture{
-  height:50vh;
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.post-div{
-  background-color: khaki;
-  margin:1vh;
-  list-style: none;
-  min-height:8vh;
-}
-
-#post-btn{
-  display: block;
-  margin-right:1vw;
-  margin-left:auto;
+  font-size: 12pt;
+  justify-content: center;
 
 }
 
-.post-input{display:block;
-margin-left:auto;
-margin-right:auto;}
-
-.subhead{text-align: center;}
+.page-title{text-align: center;
+}
 
 .pal-about{font-size:16pt;
   margin-top:0;
-}
-
-.pal-name{
-text-align: center;
-font-size: 26pt;
-margin-bottom: 0;
-margin-top:1vh
 }
 
 .pals-layout{
@@ -97,12 +84,54 @@ padding-bottom:1vh;
 border-radius:40px;
 }
 
+.pal-name{
+text-align: center;
+font-size: 22pt;
+margin-bottom: 0;
+margin-top:1vh;
+font-weight: bold;
+}
+
 .pal-picture{
   width: 55vw;
   display:block;
   margin-left:auto;
   margin-right:auto;
 }
+
+.pancake-picture{
+height:40vh;
+background-color: khaki;
+padding:10px;
+margin:1vw;
+border-radius:20px;
+}
+
+#pancake-picture-div{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+#post-btn{
+  display: block;
+  margin-right:1vw;
+  margin-left:auto;
+
+}
+
+.post-div{
+  background-color: khaki;
+  margin:1vh;
+  list-style: none;
+  min-height:8vh;
+}
+
+
+.post-input{display:block;
+margin-left:auto;
+margin-right:auto;}
 
 .recipe-div{
   width:50vw;
@@ -119,17 +148,4 @@ border-radius:40px;
   
 }
 
-.page-title{text-align: center;
-text-decoration:underline;}
-
-body{background-color: burlywood;
-margin-left:5vw;
-margin-right:5vw;
-font-family: tahoma;}
-
-header{background-color:goldenrod;
-margin-top: 0px;
-padding-left: 1vw;
-padding-right:1vw;
-padding-top:.25vh;
-padding-bottom:.25vh;}
+.subhead{text-align: center;}

@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 
 
 class Posts extends Component {
-    state= {posts:['Posts are currently under construction!', "I'm an example post!"]}
+    state= {
+        posts:['Posts are currently under construction!', "I'm an example post!"],
+        text:''
+    }
     
 
     
@@ -16,17 +19,22 @@ class Posts extends Component {
     }
     
     postSubmit =(event)=>{
+        if(this.state.text==''){
+            alert('Post cannot be blank')
+        };
+        if(this.state.text !==''){
         this.setState({
             posts:[...this.state.posts, this.state.text],
             text:''
         })
+    }
     }
 
      render(){
     return (
         <div className="home-div">
             <h2 class="page-title">Pancake Posts Page</h2>
-            <textarea placeholder="Write your post here:" rows="4" cols="50" className="post-input" value={this.state.text} onChange={(event) => this.handleChange(event, 'text')} />
+            <textarea id="textarea" placeholder="Write your post here:" rows="4" cols="50" className="post-input" value={this.state.text} onChange={(event) => this.handleChange(event, 'text')} />
        <br></br>
         <button id="post-btn" onClick={this.postSubmit}>Post</button>
 
