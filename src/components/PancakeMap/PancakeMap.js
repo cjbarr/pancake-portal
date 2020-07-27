@@ -26,7 +26,7 @@ state={};
         <div className="home-div">
             <h2 className="page-title">Pancake Map</h2>
             {this.state.lt && 
-            <iframe id="map-div"
+            <iframe title="LocalPancakes" id="map-div"
                 src={'https://www.google.com/maps/embed/v1/search?key=AIzaSyCuA0YFT_ZYpmTiFzz1w5pYCheWlFCsebY&center='+this.state.lt+','+this.state.lg+'&q=Pancakes&zoom=13'}>
             </iframe>
     }
