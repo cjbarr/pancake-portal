@@ -8,7 +8,7 @@ function Pictures() {
                 <img className="pancake-picture" src="/images/pancake1.jpg" alt="Stack of pancakes"/>
                 <img className="pancake-picture" src="/images/pancake2.jpg" alt="Stack of pancakes" />
                 <img className="pancake-picture" src="/images/pancake3.jpg" alt="Stack of pancakes" />
-                <img className="pancake-picture" src="/images/pancake4.jpg" />
+                <img className="pancake-picture" src="/images/pancake4.jpg" alt="Stack of pancakes" />
         </div>
         </div>
     )

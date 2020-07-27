@@ -37,6 +37,15 @@ border-radius: 25px;
 padding:.5vw;
 }
 
+
+#map-div{width:75vw;
+height:75vh;
+display:block;
+margin-left: auto;
+margin-right:auto;
+background-color:khaki;
+padding:2vw;}
+
 .nav{
   padding: 0;
   margin: 0;

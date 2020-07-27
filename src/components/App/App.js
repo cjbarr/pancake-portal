@@ -6,8 +6,10 @@ import Header from '../Header/Header';
 import Pictures from '../Pictures/Pictures';
 import Recipes from '../Recipes/Recipes';
 import Posts from '../Posts/Posts';
-import Pals from '../Pals/Pals'
-import Home from '../Home/Home'
+import Pals from '../Pals/Pals';
+import Home from '../Home/Home';
+import PancakeMap from '../PancakeMap/PancakeMap';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route exact path="/PancakePals" component={Pals} />
           <Route exact path="/PancakeRecipes" component={Recipes} />
           <Route exact path="/PancakePosts" component={Posts} />
+          <Route exact path="/PancakeMap" component={PancakeMap} />
       </Switch>
       </Router>
     </div>

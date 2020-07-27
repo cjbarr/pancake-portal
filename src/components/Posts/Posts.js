@@ -19,7 +19,7 @@ class Posts extends Component {
     }
     
     postSubmit =(event)=>{
-        if(this.state.text==''){
+        if(this.state.text===''){
             alert('Post cannot be blank')
         };
         if(this.state.text !==''){
