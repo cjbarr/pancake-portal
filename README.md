@@ -1,3 +1,7 @@
+Pancake Portal is a pancake-themed website created in React as a platform to refresh my react.js experience. I personally love pancakes, and it's a fun project to mess around in and research new technologies to incorporate. 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
