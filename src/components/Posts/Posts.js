@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 
 
@@ -30,12 +31,20 @@ class Posts extends Component {
     }
     }
 
+    postTest=(event)=>{
+        this.props.dispatch({
+            type:"TEST"
+        })
+    }
+
      render(){
     return (
         <div className="home-div">
             <h2 class="page-title">Pancake Posts Page</h2>
             <textarea id="textarea" placeholder="Write your post here:" rows="4" cols="50" className="post-input" value={this.state.text} onChange={(event) => this.handleChange(event, 'text')} />
        <br></br>
+
+       <button onClick={this.postTest}>TESt</button>
         <button id="post-btn" onClick={this.postSubmit}>Post</button>
 
         {this.state.posts!==[] &&
@@ -46,4 +55,9 @@ class Posts extends Component {
 }
 }
 
-export default Posts
+
+const putReduxStateOnProps = (reduxState) => ({
+    reduxState
+})
+
+export default connect(putReduxStateOnProps)(Posts);

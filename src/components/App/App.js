@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from '../Nav/Nav';
 import Header from '../Header/Header';
@@ -11,7 +12,8 @@ import Home from '../Home/Home';
 import PancakeMap from '../PancakeMap/PancakeMap';
 
 
-function App() {
+class App extends Component{
+  render(){
   return (
     <div>
       <Router>
@@ -29,5 +31,9 @@ function App() {
     </div>
   );
 }
+}
 
-export default App;
+const mapReduxStateToProps = reduxState => ({
+  reduxState,
+});
+export default connect(mapReduxStateToProps)(App);

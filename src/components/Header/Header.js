@@ -4,7 +4,7 @@ function Header(){
     return(
         <header>
         <h1>The Pancake Portal</h1>
-        <h3 class="subhead">A place to participate in Pancaking</h3>
+        <h3 className="subhead">A place to participate in Pancaking</h3>
         </header>
     )
 }
