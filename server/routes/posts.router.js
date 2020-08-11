@@ -14,6 +14,17 @@ router.get('/', (req, res) => {
         });
 });//get posts request
 
+router.post('/', (req,res)=>{
+    console.log('body', req.body)
+    let queryText = `INSERT INTO "posts"("text") VALUES ('${req.body.text}');`;
+    pool.query(queryText)
+        .then((result) => {
+            res.send(result.rows);
+        }).catch((err) => {
+            console.log('Error in getting your query', err);
+            res.sendStatus(200);
+        });
+})
 
 
 

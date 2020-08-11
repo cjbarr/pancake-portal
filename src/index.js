@@ -21,9 +21,13 @@ const postReducer = (state = [], action) => {
     }
 }
 
-function* postPosts() {
-    console.log('in the POST')
+function* postPosts(action) {
+    const postPost = yield Axios.post(`/posts`, action.payload)
+    console.log('in the put description', postPost)
+    yield put({
+        type: 'GET_POSTS',
 
+    })
 }
 
 function* getPosts() {
