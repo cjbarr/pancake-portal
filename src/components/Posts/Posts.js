@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 
 
 class Posts extends Component {
+
+componentDidMount = ()=>{
+    this.getPosts();
+}
     state= {
         posts:['Posts are currently under construction!', "I'm an example post!"],
         text:''
@@ -36,13 +40,12 @@ class Posts extends Component {
     }
     }
 
-    postTest=(event)=>{
-        this.props.dispatch({
-            type:'POST',
-            payload: {
-                text: this.state.text
-        }})
-    }
+    getPosts=()=>{
+            this.props.dispatch({
+                type: 'GET_POSTS',
+            })
+        }
+    
 
      render(){
     return (
@@ -54,9 +57,9 @@ class Posts extends Component {
        <button onClick={this.postTest}>TESt</button>
         <button id="post-btn" onClick={this.postSubmit}>Post</button>
 
-        {this.state.posts!==[] &&
-            <ul>{this.state.posts.map(post=><li className="post-div">{post}</li>)}</ul>
-     }
+            {this.props.reduxState.postReducer &&
+                <ul>{this.props.reduxState.postReducer.map(post => <li className="post-div">{post.text}</li>)}</ul>
+            }
         </div>
     )
 }

@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 5000;
 
 
-const postRouter = require('./routes/posts.router');
+const postRouter = require('./routes/posts.router.js');
 
 
 /** ---------- MIDDLEWARE ---------- **/

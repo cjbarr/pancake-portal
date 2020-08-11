@@ -26,11 +26,19 @@ function* postPosts() {
 
 }
 
-
+function* getPosts() {
+    const postsResponse = yield Axios.get('/posts')
+    console.log('in the GET getPosts', postsResponse)
+    yield put({
+        type: 'SET_POSTS',
+        payload: postsResponse.data
+    })
+}
 
 
 function* watcherSaga() {
     yield takeEvery('POST', postPosts);
+    yield takeEvery('GET_POSTS', getPosts)
 
 }
 

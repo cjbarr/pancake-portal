@@ -4,7 +4,7 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    let queryText = `SELECT * FROM posts ;`;
+    let queryText = `SELECT * FROM posts;`;
     pool.query(queryText)
         .then((result) => {
             res.send(result.rows);
@@ -13,6 +13,8 @@ router.get('/', (req, res) => {
             res.sendStatus(200);
         });
 });//get posts request
+
+
 
 
 
