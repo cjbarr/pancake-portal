@@ -11,8 +11,18 @@ import createSagaMiddleware from 'redux-saga';
 const sagaMiddleware = createSagaMiddleware();
 
 
-function* getPosts() {
-    console.log('in the GET getMovies')
+
+const postReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_POSTS':
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
+function* postPosts() {
+    console.log('in the POST')
 
 }
 
@@ -20,14 +30,14 @@ function* getPosts() {
 
 
 function* watcherSaga() {
-    yield takeEvery('TEST', getPosts);
+    yield takeEvery('POST', postPosts);
 
 }
 
 
 const storeInstance = createStore(
     combineReducers({
-
+        postReducer
     }),
     applyMiddleware(sagaMiddleware, logger),
 );

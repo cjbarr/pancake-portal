@@ -24,8 +24,13 @@ class Posts extends Component {
             alert('Post cannot be blank')
         };
         if(this.state.text !==''){
-        this.setState({
-            posts:[...this.state.posts, this.state.text],
+            this.props.dispatch({
+                type: 'POST',
+                payload: {
+                    text: this.state.text
+                }
+            })
+            this.setState({
             text:''
         })
     }
@@ -33,8 +38,10 @@ class Posts extends Component {
 
     postTest=(event)=>{
         this.props.dispatch({
-            type:"TEST"
-        })
+            type:'POST',
+            payload: {
+                text: this.state.text
+        }})
     }
 
      render(){
