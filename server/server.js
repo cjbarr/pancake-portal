@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 5000;
-
+const pool = require('./modules/pool.js');
 
 const postRouter = require('./routes/posts.router.js');
 
@@ -16,7 +15,12 @@ app.use(express.static('build'));
 
 app.use('/posts', postRouter);
 
-/** ---------- START SERVER ---------- **/
-app.listen(port, function () {
-    console.log('Listening on port: ', port);
-});
+/** ----------SERVER ---------- **/
+pool.connect((function (err) {
+
+    if (!err) {
+        console.log("Database is connected ... ");
+    } else {
+        console.log("Error connecting database ... ");
+    }
+}));
